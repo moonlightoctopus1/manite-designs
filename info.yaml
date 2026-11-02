@@ -1,0 +1,45 @@
+project:
+  title:        "Manite bead controller S1 (digital)"
+  author:       "Nelson Bunker"
+  discord:      ""
+  description:  "Digital core of a magnetic-bead controller: radio frame decoder, zone and ID addressing, LED, move timer, latch pulses"
+  language:     "Verilog"
+  clock_hz:     1000000
+
+  tiles: "1x2"
+
+  top_module:  "tt_um_manite_s1-moonlightoctopus"
+
+  source_files:
+    - "project.v"
+    - "bead_core.v"
+
+pinout:
+  ui[0]: "RX (on/off carrier stream from an outside comparator)"
+  ui[1]: "SLOW (clock is the 32 kHz move clock)"
+  ui[2]: "SUPPLY_OK (bus supply good)"
+  ui[3]: "(unused)"
+  ui[4]: "(unused)"
+  ui[5]: "(unused)"
+  ui[6]: "(unused)"
+  ui[7]: "(unused)"
+
+  uo[0]: "LED"
+  uo[1]: "LATCH_A"
+  uo[2]: "LATCH_B"
+  uo[3]: "MOVING"
+  uo[4]: "FRAME_GOOD"
+  uo[5]: "ID_HIT"
+  uo[6]: "ZONE_HIT"
+  uo[7]: "(unused)"
+
+  uio[0]: "STRAP0"
+  uio[1]: "STRAP1"
+  uio[2]: "STRAP2"
+  uio[3]: "STRAP3"
+  uio[4]: "STRAP4"
+  uio[5]: "STRAP5"
+  uio[6]: "STRAP6"
+  uio[7]: "STRAP7"
+
+yaml_version: 6
